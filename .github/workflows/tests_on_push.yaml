@@ -28,5 +28,5 @@ jobs:
       - uses: actions/checkout@main
       - name: Build  image
         run: docker build -t &LOGIN/&NAME:${GITHUB_REF:11} -f Dockerfile .
-        name: Push image to docker
+      - name: Push image to docker
         run: docker push &LOGIN/&NAME:${GITHUB_REF:11}
