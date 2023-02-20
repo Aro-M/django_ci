@@ -12,5 +12,7 @@ jobs:
           python-version: 3.10
       - name: Install requirements
         run: pip install -r requirements.txt
+      - name: Check codestyle
+        run: pycodestyle ./demopages/*.py
       - name: Tests
         run: python3 manage.py  test
