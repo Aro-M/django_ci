@@ -20,7 +20,7 @@ jobs:
     needs: [run_tests]
     runs-on: [ubuntu-latest]
     env:
-      LOGIN: &{{ secrets.DOCKER_LOGIN}}
+      LOGIN: ${{ secrets.DOCKER_LOGIN}}
       NAME:  ${{ secrets.DOCKER_NAME}}
     steps:
       - name: Login to docker
